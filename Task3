@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 3 ‒ Advanced Styling & JavaScript</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    h1, h2 {
+      color: #0f7a82;
+    }
+
+    header {
+      background-color: #0f7a82;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    /**********************************************************
+     * 1) RESPONSIVE LAYOUT DEMO
+     **********************************************************/
+    /**********************************************************
+ * 1) RESPONSIVE LAYOUT DEMO (Simplified)
+ **********************************************************/
+/**********************************************************
+ * 1) RESPONSIVE LAYOUT DEMO (Simplified)
+ **********************************************************/
+.resp-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px; /* reduced gap */
+  align-items: start;
+  background-color: #fff; /* keep white */
+  border: 1px solid #ddd; /* lighter border */
+  border-radius: 6px; /* slightly smaller radius */
+  padding: 12px; /* reduced padding */
+}
+
+.resp-sidebar {
+  background-color: #f0fbfb; /* lighter pastel blue */
+  padding: 10px; /* reduced padding */
+  border-radius: 4px; /* smaller radius */
+}
+
+.resp-content {
+  background-color: #f9fdfd; /* even lighter blue */
+  padding: 10px; /* reduced padding */
+  border-radius: 4px;
+}
+
+.resp-sidebar ul {
+  list-style: none;
+}
+
+.resp-sidebar li {
+  margin-bottom: 6px; /* smaller margin */
+}
+
+.resp-sidebar a {
+  text-decoration: none;
+  color: #279597; /* softer blue */
+  font-weight: 500;
+}
+
+.resp-sidebar a:hover {
+  text-decoration: underline;
+}
+
+.resp-content img {
+  max-width: 70%; /* reduced from 100% */
+  height: auto;
+  border-radius: 3px; /* smaller radius */
+  margin-top: 6px; /* less margin */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+    /**********************************************************
+     * 2) IMAGE CAROUSEL (CSS)
+     **********************************************************/
+    .carousel-wrapper {
+      max-width: 400px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #0f7a82;
+      border-radius: 8px;
+    }
+
+    .carousel-slide {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .carousel-button:hover {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel-button.prev {
+      left: 10px;
+    }
+
+    .carousel-button.next {
+      right: 10px;
+    }
+
+    /**********************************************************
+     * 3) API FETCH SECTION (CSS)
+     **********************************************************/
+    .api-section {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .api-section button {
+      background-color: #0f7a82;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .api-section button:hover {
+      background-color: #0a646d;
+    }
+
+    .api-section .joke {
+      margin-top: 20px;
+      font-style: italic;
+      color: #555;
+    }
+
+    /**********************************************************
+     * 4) MEDIA QUERIES
+     **********************************************************/
+    @media (max-width: 768px) {
+      .resp-container {
+        grid-template-columns: 1fr;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .resp-container {
+        padding: 10px;
+        gap: 10px;
+      }
+
+      .resp-sidebar, .resp-content {
+        padding: 10px;
+      }
+
+      .carousel-button {
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Task 3: Advanced Styling & JavaScript</h1>
+  </header>
+
+  <main>
+    <!-- 1) Responsive Layout -->
+    <section id="responsive-demo">
+      <h2>1. Responsive Layout Example</h2>
+      <div class="resp-container">
+        <aside class="resp-sidebar">
+          <h3>Sidebar Navigation</h3>
+          <ul>
+            <li><a href="#responsive-demo">Overview</a></li>
+            <li><a href="#carousel-demo">Image Carousel</a></li>
+            <li><a href="#api-demo">API Fetch</a></li>
+          </ul>
+        </aside>
+
+        <div class="resp-content">
+          <h3>Content Area</h3>
+          <p>Here’s a scenic view for your inspiration.</p>
+          <img src="p5.jpg" alt="Responsive Example" />
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) Image Carousel -->
+    <section id="carousel-demo">
+      <h2>2. Image Carousel</h2>
+      <div class="carousel-wrapper">
+        <div class="carousel-slide" id="carouselSlide">
+          <img src="p1.jpg" alt="Image 1" />
+          <img src="p2.jpg" alt="Image 2" />
+          <img src="p3.jpg" alt="Image 3" />
+        </div>
+        <button class="carousel-button prev" id="prevBtn">&lt;</button>
+        <button class="carousel-button next" id="nextBtn">&gt;</button>
+      </div>
+    </section>
+
+    <!-- 3) API Joke Fetch -->
+    <section id="api-demo">
+      <h2>3. Fetch Data from an API</h2>
+      <div class="api-section">
+        <p>Click below to fetch a random joke:</p>
+        <button id="getJokeBtn">Get a Random Joke</button>
+        <div class="joke" id="jokeDisplay">Waiting for you to click…</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Carousel Logic
+    (function () {
+      const carouselSlide = document.getElementById("carouselSlide");
+      const slides = carouselSlide.querySelectorAll("img");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let index = 0;
+      const totalSlides = slides.length;
+
+      function updateCarousel() {
+        const offset = -index * 100;
+        carouselSlide.style.transform = `translateX(${offset}%)`;
+      }
+
+      nextBtn.addEventListener("click", () => {
+        index = (index + 1) % totalSlides;
+        updateCarousel();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      });
+
+      setInterval(() => {
+        index = (index + 1) % totalSlides;
+        updateCarousel();
+      }, 5000);
+    })();
+
+    // Joke Fetch Logic
+    document.getElementById("getJokeBtn").addEventListener("click", () => {
+      const displayDiv = document.getElementById("jokeDisplay");
+      displayDiv.textContent = "Fetching a joke…";
+
+      fetch("https://official-joke-api.appspot.com/random_joke")
+        .then((response) => {
+          if (!response.ok) throw new Error("Network response was not ok");
+          return response.json();
+        })
+        .then((jokeData) => {
+          displayDiv.textContent = `${jokeData.setup} — ${jokeData.punchline}`;
+        })
+        .catch((error) => {
+          console.error("Fetch error:", error);
+          displayDiv.textContent = "Sorry, could not fetch a joke at this time.";
+        });
+    });
+  </script>
+</body>
+</html>
