@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>G. Vidya Sagarika | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo"></div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact" class="btn">Hire Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="hero-text">
+      <h1>G. Vidya Sagarika</h1>
+      <p>Hi! I'm a creative web developer passionate about HTML, CSS, JavaScript, and building intuitive interfaces.
+        I am passionate and driven final-year student. I actively contribute as an IEEE council member, where I collaborate with peers to explore innovative technologies. I’ve gained foundational knowledge in JavaScript and continue enhancing my skills in web development and beyond. I believe in continuous learning and making an impact through both technical and leadership roles.
+      </p>
+      <a href="resume.pdf" class="btn-primary" download>Download CV</a>
+    </div>
+    <div class="hero-img">
+      <img src="min.png" alt="Profile Photo">
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>I’m G. Vidya Sagarika, a passionate front-end developer skilled in HTML, CSS, JavaScript. I love designing clean, responsive websites and aim to create beautiful user experiences.</p>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Services</h2>
+    <ul>
+      <li>Web Design</li>
+      <li>Frontend Development</li>
+      <li>Responsive Layouts</li>
+    </ul>
+  </section>
+
+  <section id="portfolio" class="section">
+    <h2>Portfolio</h2>
+    <p>Check out some of my recent projects.</p>
+    <div class="project">
+      <img src="todo1.jpeg" alt="to-do list">
+      <img src="todo2.jpeg" alt="to-do list">
+    <p>To-do List</p>
+    </div>
+    <div class="project">
+    <img src="churn1.jpeg" alt="customer churn">
+    <img src="churn2.jpeg" alt="customer churn">
+    <p>Customer Churn Prediction</p>
+    </div>
+    
+    </div>
+    <div class="project">
+    <img src="pro1.jpeg" alt="product page">
+    <img src="pro2.jpeg" alt="product page">
+    <img src="pro3.jpeg" alt="product page">
+    <img src="pro4.jpeg" alt="product page">
+    <img src="pro5.jpeg" alt="product page">
+    <p>Product Listing Page</p>
+    </div>
+    
+
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <p>Email: sagarika.vidya@gmail.com</p>
+    <p>Phone: +91-XXXXXXXXXX</p>
+    <p>
+      <i class="fab fa-linkedin"></i>
+      LinkedIn: 
+      <a href="https://www.linkedin.com/in/vidya-sagarika-gollapalli-6872a6257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+         target="_blank">
+        linkedin.com/in/vidya-sagarika-gollapalli
+      </a>
+    </p>
+  </section>
+
+</body>
+</html>
